@@ -8,26 +8,49 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<div class="wrap_panel_all px-3">
+<div class="wrap_panel_all">
     <header class="header">
             <div class="row">
-                <div class="col-md-3 p-0">
-                    <div class="header-sidebar bg-danger pe-2">
+                <div class="col-md-2 p-0 bg-danger ">
+                    <div class="header-sidebar px-2">
                         <i class="fa fa-trophy"></i>
                         <i class="fa fa-toggle-on"></i>
                     </div>
                 </div>
-                <div class="col-md-9 p-0">
-                    <div class="header-content bg-info d-flex justify-content-between">
+                <div class="col-md-10 p-0 bg-info px-2">
+                    <div class="header-content  d-flex justify-content-between">
                         <div class="header-content-right">
                             <i class="fa fa-search"></i>
                             <i class="fa fa-expand"></i>
                         </div>
                         <div class="header-content-left">
-                            <i class="fa fa-bell"></i>
+<!--                            <i class="fa fa-bell"></i>-->
+                            <div class="btn-group">
+                                <span class="fa fa-bell" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                                </span>
+                                <ul class="dropdown-menu rounded-1 shadow font-1">
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-cog ms-2"></i> تنظیمات</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-user ms-2"></i> کاربر </a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"> <i class="fa fa-envelope ms-2"></i> پیام ها</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-lock ms-2"></i>قفل صفحه</a></li>
+                                    <li><a class="dropdown-item" href="#"> <i class="fa fa-sign-out ms-2"></i>خروج</a></li>
+                                </ul>
+                            </div>
                             <i class="fa fa-comment">
                                 <sup class="badge badge-danger">4</sup>
                             </i>
+                            <div class="btn-group">
+                                <span class="dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                                    محمد نیک عیش
+                                </span>
+                                <ul class="dropdown-menu rounded-1 shadow font-1">
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-cog ms-2"></i> تنظیمات</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-user ms-2"></i> کاربر </a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"> <i class="fa fa-envelope ms-2"></i> پیام ها</a></li>
+                                    <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-lock ms-2"></i>قفل صفحه</a></li>
+                                    <li><a class="dropdown-item" href="#"> <i class="fa fa-sign-out ms-2"></i>خروج</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
