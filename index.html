@@ -5,28 +5,29 @@
     <title>پنل ادمین</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="wrap_panel_all">
     <header class="header">
             <div class="row">
-                <div class="col-md-2 p-0 bg-danger ">
-                    <div class="header-sidebar px-2">
-                        <i class="fa fa-trophy"></i>
+                <div class="col-md-2 py-2 p-0 bg-sidebar shadow ">
+                    <div class="header-sidebar d-flex justify-content-between align-items-center px-2 ">
+                        <img src="assets/images/logo.png">
                         <i class="fa fa-toggle-on"></i>
                     </div>
+<!--                      end header-sidebar-->
                 </div>
-                <div class="col-md-10 p-0 bg-info px-2">
-                    <div class="header-content  d-flex justify-content-between">
-                        <div class="header-content-right">
+                <div class="col-md-10 py-2 shadow p-0 bg-white px-2 z-3">
+                    <div class="header-content d-flex justify-content-between">
+                        <div class="header-content-right d-flex justify-content-around align-items-center col-md-3 ">
                             <i class="fa fa-search"></i>
                             <i class="fa fa-expand"></i>
                         </div>
-                        <div class="header-content-left">
-<!--                            <i class="fa fa-bell"></i>-->
+<!--                       end header-content-right-->
+                        <div class="header-content-left col-md-3 d-flex align-items-center justify-content-around ">
                             <div class="btn-group">
-                                <span class="fa fa-bell" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
+                                <span class="far fa-bell" type="button" data-bs-toggle="dropdown" data-bs-auto-close="false" aria-expanded="false">
                                 </span>
                                 <ul class="dropdown-menu rounded-1 shadow font-1">
                                     <li class="border-bottom"><a class="dropdown-item" href="#"><i class="fa fa-cog ms-2"></i> تنظیمات</a></li>
@@ -36,7 +37,7 @@
                                     <li><a class="dropdown-item" href="#"> <i class="fa fa-sign-out ms-2"></i>خروج</a></li>
                                 </ul>
                             </div>
-                            <i class="fa fa-comment">
+                            <i class="far fa-comment-alt">
                                 <sup class="badge badge-danger">4</sup>
                             </i>
                             <div class="btn-group">
@@ -52,10 +53,145 @@
                                 </ul>
                             </div>
                         </div>
+<!--                       end header-content-left-->
                     </div>
+<!--                    end header-content-->
                 </div>
             </div>
     </header>
+    <section class="wrap_content_sidebar">
+        <div class="row">
+            <div class="col-md-2 wrap_sidebar p-3 h_100vh bg-sidebar">
+                <ul class="navbar-nav font-1 text-muted">
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link text-link">
+                            <i class="fa fa-home-alt"></i>
+                            <span>خانه</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link text-link">
+                            <i class="fa fa-list"></i>
+                            <span>دسته ها</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link text-link">
+                            <i class="fa fa-note-sticky"></i>
+                            <span>نوشته ها</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link text-link">
+                            <i class="fa fa-users"></i>
+                            <span>کاربران</span>
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a href="#" class="nav-link text-link">
+                            <i class="fa fa-box"></i>
+                            <span>تنظیمات</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-md-10 wrap_content bg-secondary-subtle ">
+                <div class="wrap_box mt-3">
+                    <div class="row">
+                        <div class="col-md-3 col-12">
+                            <div class="card text-bg-danger">
+
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div><div class="col-md-3 col-12">
+                        <div class="card text-bg-warning">
+                            <div class="card-body">
+                                <div class="card-title">عنوان</div>
+                                <div class="card-text">متن</div>
+                            </div>
+                            <div class="card-footer ">فوتر</div>
+                        </div>
+                    </div><div class="col-md-3 col-12">
+                        <div class="card text-bg-info">
+                            <div class="card-body">
+                                <div class="card-title">عنوان</div>
+                                <div class="card-text">متن</div>
+                            </div>
+                            <div class="card-footer ">فوتر</div>
+                        </div>
+                    </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <div class="card text-bg-success">
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <div class="card text-bg-dark">
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12 mb-2">
+                            <div class="card text-bg-primary">
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <div class="card text-bg-light">
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-12">
+                            <div class="card text-bg-secondary">
+                                <div class="card-body">
+                                    <div class="card-title">عنوان</div>
+                                    <div class="card-text">متن</div>
+                                </div>
+                                <div class="card-footer ">فوتر</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+<!--                end wrap_box-->
+                <div class="wrap_info bg-white shadow mt-3 p-2">
+                    <h4>بخش کاربران</h4>
+                    <span class="text-muted">اطلاعاتی در مورد کاربران</span>
+                    <p class="text-align-justify">
+
+
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+
+                    </p>
+                </div>
+            </div>
+<!--            end wrap_content-->
+        </div>
+    </section>
+<!--    end wrap_content_sidebar-->
 </div>
 
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
