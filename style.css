@@ -32,3 +32,9 @@ ul,li{
 .text-align-justify{
     text-align: justify;
 }
+.pointer{
+    cursor: pointer;
+}
+.top-2rem{
+    top: 2.9rem;
+}
