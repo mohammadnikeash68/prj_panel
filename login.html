@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>صفحه ورود</title>
+
+</head>
+<body class="bg-secondary">
+<div class="wrap-login d-flex vh-100 m-3  justify-content-center align-items-center">
+
+        <div class="shadow bg-white w-50 p-3  rounded-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <form class="form-group" action="#" method="post">
+                        <div class="mb-2">
+                            <label for="" class="form-label  mb-1">نام کاربری :</label>
+                            <input type="text" name="username" class="form-control">
+                        </div>
+                        <div class="mb-4">
+                            <label for="" class="form-label  mb-1">رمز عبور :</label>
+                            <input type="text" name="password" class="form-control">
+                        </div>
+                        <div class="mb-2">
+                            <label for="" class="form-label  mb-1 fs-7">کپچا :</label>
+                            <input type="text" id="capcha" class="form-control  border-0 text-center text-decoration-line-through fst-italic " disabled readonly>
+                        </div>
+                        <div class="mb-2 d-flex align-items-center">
+                            <input type="text" id="enter_capcha" class="form-control text-center " >
+                            <i id="msg" class="me-1"></i>
+                        </div>
+                        <div class="mb-2">
+                            <input type="submit" name="btn-login" class="btn btn-success w-100" value="ورود">
+                        </div>
+                        <div class="">
+                            <label>
+                                <input type="checkbox" name="remember" class="form-check-input">
+                                <span class="h6">مرا به خاطر بسپار</span>
+
+                            </label>
+                        </div>
+                        <div class="mt-2">
+                            <a href="#" class="form-text  nav-link fz-2">آیا رمز خود را فراموش کرده اید؟</a>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 d-none d-md-block">
+                    <img src="assets/images/login.jpg" class="w-100 img-thumbnail">
+                </div>
+            </div>
+        </div>
+</div>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script>
+    let alefba = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+    let first = alefba[Math.floor(Math.random() * alefba.length)];
+    let second = Math.floor(Math.random() * 100);
+    let third = alefba[Math.floor(Math.random() * alefba.length)];
+    let forth = Math.floor(Math.random() * 100);
+    let fifth = alefba[Math.floor(Math.random() * alefba.length)];
+    let capcha = first.toString() + second.toString() + third.toString() + forth.toString() + fifth.toString();
+    console.log(capcha)
+
+    $("#capcha").val(capcha)
+    $("#enter_capcha").on("focusout",function (){
+        $("#msg").removeClass('fa fa-check-circle text-success').removeClass('fa fa-times-circle text-danger ')
+        let code = $(this).val()
+        if (capcha === code){
+            $("#msg").addClass('fa fa-check-circle text-success')
+        }else {
+            $("#msg").addClass('fa fa-times-circle text-danger').attr('title','کد کپچا اشتباه می باشد')
+        }
+    })
+</script>
+</body>
+</html>
