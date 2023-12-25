@@ -11,7 +11,7 @@
 <div class="wrap_panel_all">
     <header class="header position-fixed end-0 start-0 z-3">
             <div class="row">
-                <div class="col-md-2 col-12 py-2 p-0 bg-sidebar">
+                <div class="col-md-3 col-12 col-lg-2 py-2 p-0 bg-sidebar">
                     <div class="header-sidebar d-flex flex-row-reverse flex-md-row justify-content-between align-items-center px-2 ">
 
                         <i class="fa fa-ellipsis-h pointer d-block d-md-none text-white" id="menu_toggle" data-status="0"></i>
@@ -21,7 +21,7 @@
                     </div>
 <!--                      end header-sidebar-->
                 </div>
-                <div class="col-md-10 py-2 col-12 z-3  d-md-block shadow p-0 bg-white px-2 z-3" id="header_content" style="display: none">
+                <div class="col-md-9 col-lg-10 py-2 col-12 z-3  d-md-block shadow p-0 bg-white px-2 z-3" id="header_content" style="display: none">
                     <div class="header-content d-flex justify-content-between">
                         <div class="header-content-right d-flex justify-content-around align-items-center col-md-3 ">
                             <i class="fa fa-search"></i>
@@ -64,7 +64,7 @@
     </header>
     <section class="wrap_content_sidebar position-relative top-2rem">
         <div class="row">
-            <div class="col-md-2 col-5 wrap_sidebar z-2  position-fixed shadow  p-3 h_100vh bg-sidebar">
+            <div class="col-md-3 col-lg-2 col-12 col-sm-5 wrap_sidebar z-2  position-fixed shadow  p-3 h_100vh bg-sidebar">
                 <ul class="navbar-nav font-1 text-muted">
                     <li class="nav-item mb-3">
                         <a href="#" class="nav-link text-link">
@@ -99,12 +99,12 @@
 
                 </ul>
             </div>
-            <div class="col-md-2"></div>
-            <div class="col-md-10 wrap_content  ">
+            <div class="col-md-3 col-lg-2"></div>
+            <div class="col-md-9 wrap_content col-lg-10">
                 <div class="wrap_box mt-3">
                     <div class="row">
-                        <div class="col-md-3 col-12">
-                            <div class="card text-bg-danger">
+                        <div class="col-md-3 col-12 mb-2 ">
+                            <div class="card text-bg-danger shadow">
 
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
@@ -112,16 +112,16 @@
                                 </div>
                                 <div class="card-footer ">فوتر</div>
                             </div>
-                        </div><div class="col-md-3 col-12">
-                        <div class="card text-bg-warning">
+                        </div><div class="col-md-3 col-12 mb-2">
+                        <div class="card text-bg-warning shadow">
                             <div class="card-body">
                                 <div class="card-title">عنوان</div>
                                 <div class="card-text">متن</div>
                             </div>
                             <div class="card-footer ">فوتر</div>
                         </div>
-                    </div><div class="col-md-3 col-12">
-                        <div class="card text-bg-info">
+                    </div><div class="col-md-3 col-12 mb-2">
+                        <div class="card text-bg-info shadow">
                             <div class="card-body">
                                 <div class="card-title">عنوان</div>
                                 <div class="card-text">متن</div>
@@ -130,7 +130,7 @@
                         </div>
                     </div>
                         <div class="col-md-3 col-12 mb-2">
-                            <div class="card text-bg-success">
+                            <div class="card text-bg-success shadow">
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
                                     <div class="card-text">متن</div>
@@ -139,7 +139,7 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-12 mb-2">
-                            <div class="card text-bg-dark">
+                            <div class="card text-bg-dark shadow">
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
                                     <div class="card-text">متن</div>
@@ -148,7 +148,7 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-12 mb-2">
-                            <div class="card text-bg-primary">
+                            <div class="card text-bg-primary shadow">
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
                                     <div class="card-text">متن</div>
@@ -156,8 +156,8 @@
                                 <div class="card-footer ">فوتر</div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-12">
-                            <div class="card text-bg-light">
+                        <div class="col-md-3 col-12 mb-2">
+                            <div class="card text-bg-light shadow">
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
                                     <div class="card-text">متن</div>
@@ -165,8 +165,8 @@
                                 <div class="card-footer ">فوتر</div>
                             </div>
                         </div>
-                        <div class="col-md-3 col-12">
-                            <div class="card text-bg-secondary">
+                        <div class="col-md-3 col-12 mb-2">
+                            <div class="card text-bg-secondary shadow">
                                 <div class="card-body">
                                     <div class="card-title">عنوان</div>
                                     <div class="card-text">متن</div>
@@ -220,23 +220,74 @@
         $("#switch_on_sidebar").click(function (){
             $("#switch_off_sidebar").attr("style",'display:block !important')
             $("#switch_on_sidebar").attr("style",'display:none !important')
-            $(".wrap_sidebar").animate({'margin-right':'-=16.66666667%'});
-            setTimeout(function (){
-                $(".wrap_content").removeClass('col-md-10')
-                $(".wrap_content").addClass('col-md-12')
-            },250)
+            let $width = window.innerWidth;
+            if($width >= 992){
+                $(".wrap_sidebar").animate({'margin-right':'-=16.66666667%'});
+                setTimeout(function (){
+                    $(".wrap_content").removeClass('col-lg-10')
+                    $(".wrap_content").addClass('col-lg-12')
+                },250)
+            }
+            else if($width >= 768){
+                $(".wrap_sidebar").animate({'margin-right':'-=25%'});
+                setTimeout(function (){
+                    $(".wrap_content").removeClass('col-md-9')
+                    $(".wrap_content").addClass('col-md-12')
+                },250)
+
+            }
+            else if($width >= 576){
+                $(".wrap_sidebar").animate({'margin-right':'-=41.66666667%'});
+                setTimeout(function (){
+                    $(".wrap_content").removeClass('col-md-10')
+                    $(".wrap_content").addClass('col-md-12')
+                },250)
+            }
+            else {
+                $(".wrap_sidebar").animate({'margin-right':'-=100%'});
+                // setTimeout(function (){
+                //     $(".wrap_content").removeClass('col-md-10')
+                //     $(".wrap_content").addClass('col-md-12')
+                // },250)
+            }
+
+
+
         })
         $("#switch_off_sidebar").click(function (){
             $("#switch_on_sidebar").attr("style",'display:block !important')
             $("#switch_off_sidebar").attr("style",'display:none !important')
-            $(".wrap_sidebar").animate({'margin-right':'+=16.66666667%'});
-            $(".wrap_content").removeClass('col-md-12')
-            $(".wrap_content").addClass('col-md-10')
+            let $width = window.innerWidth;
+            if($width >= 992){
+                $(".wrap_sidebar").animate({'margin-right':'+=16.66666667%'});
+                $(".wrap_content").removeClass('col-lg-12')
+                $(".wrap_content").addClass('col-lg-10')
+            }
+            else if($width >= 768){
+                $(".wrap_sidebar").animate({'margin-right':'+=25%'});
+                $(".wrap_content").removeClass('col-md-12')
+                $(".wrap_content").addClass('col-md-9')
+            }
+            else if($width >= 576){
+                $(".wrap_sidebar").animate({'margin-right':'+=41.66666667%'});
+                $(".wrap_content").removeClass('col-sm-5')
+                $(".wrap_content").addClass('col-sm-12')
+            }
+            else{
+                $(".wrap_sidebar").animate({'margin-right':'+=100%'});
+            }
+
+
+
+
+
         })
 
         $("#menu_toggle").click(function (){
             $("#header_content").fadeToggle()
         })
+
+
     })
 </script>
 </body>
