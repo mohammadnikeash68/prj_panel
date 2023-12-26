@@ -25,7 +25,11 @@
                         </div>
                         <div class="mb-2">
                             <label for="" class="form-label  mb-1 fs-7">کپچا :</label>
-                            <input type="text" id="capcha" class="form-control  border-0 text-center text-decoration-line-through fst-italic " disabled readonly>
+<!--                            <input type="text" id="capcha" value="" class="form-control  border-0 text-center text-decoration-line-through fst-italic " disabled readonly>-->
+                            <div id="capcha" class="text-decoration-line-through fst-italic text-center">
+
+                            </div>
+                            <span id="code"></span>
                         </div>
                         <div class="mb-2 d-flex align-items-center">
                             <input type="text" id="enter_capcha" class="form-control text-center " >
@@ -45,6 +49,7 @@
                             <a href="#" class="form-text  nav-link fz-2">آیا رمز خود را فراموش کرده اید؟</a>
 
                         </div>
+
                     </form>
                 </div>
                 <div class="col-md-6 d-none d-md-block">
@@ -55,6 +60,7 @@
 </div>
 <script src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="node_modules/html2canvas/dist/html2canvas.min.js"></script>
 <script>
     let alefba = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
     let first = alefba[Math.floor(Math.random() * alefba.length)];
@@ -64,8 +70,12 @@
     let fifth = alefba[Math.floor(Math.random() * alefba.length)];
     let capcha = first.toString() + second.toString() + third.toString() + forth.toString() + fifth.toString();
     console.log(capcha)
+    $("#capcha").text(capcha)
+    html2canvas(document.getElementById('capcha')).then(function(canvas) {
+        $("#capcha").hide()
+        $("#code").append(canvas)
+    });
 
-    $("#capcha").val(capcha)
     $("#enter_capcha").on("focusout",function (){
         $("#msg").removeClass('fa fa-check-circle text-success').removeClass('fa fa-times-circle text-danger ')
         let code = $(this).val()
@@ -75,6 +85,18 @@
             $("#msg").addClass('fa fa-times-circle text-danger').attr('title','کد کپچا اشتباه می باشد')
         }
     })
+</script>
+<script>
+    function generateCaptchaImage() {
+        var captchaText = document.getElementById('captchaText').textContent;
+
+        html2canvas(document.getElementById('captchaText')).then(function(canvas) {
+            var imageData = canvas.toDataURL("image/png");
+            var img = document.createElement("img");
+            img.src = imageData;
+            document.body.appendChild(img);
+        });
+    }
 </script>
 </body>
 </html>
