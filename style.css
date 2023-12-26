@@ -41,3 +41,7 @@ ul,li{
 .fz-2{
     font-size: 0.8rem;
 }
+div{
+    border: 1px solid red;
+    text-align: center;
+}
